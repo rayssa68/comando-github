@@ -1,0 +1,100 @@
+git init - Inicia um novo repositório Git localmente.
+git clone <URL> - Clona um repositório Git existente para o seu computador.
+git add <arquivo> - Adiciona um arquivo específico ao índice (staging area) para ser commitado.
+git add . - Adiciona todos os arquivos modificados e novos ao índice (staging area).
+git commit - Realiza um commit das mudanças no índice (staging area) para o repositório.
+git commit -m "mensagem" - Realiza um commit com uma mensagem de commit especificada.
+git status - Mostra o estado atual do repositório.
+git log - Mostra o histórico de commits.
+git branch - Lista todas as branches no repositório.
+git branch <nome> - Cria uma nova branch com o nome especificado.
+git branch -d <nome> - Deleta uma branch específica.
+git checkout <nome> - Muda para a branch especificada.
+git checkout -b <nome> - Cria uma nova branch e muda para ela.
+git merge <branch> - Funde uma branch específica na branch atual.
+git remote add <nome> <URL> - Adiciona um repositório remoto.
+git pull <remoto> <branch> - Atualiza o repositório local com mudanças do repositório remoto.
+git push <remoto> <branch> - Envia commits locais para o repositório remoto.
+git fetch <remoto> - Baixa commits do repositório remoto sem fazer merge.
+git diff - Mostra as diferenças entre arquivos não commitados.
+git diff --staged - Mostra as diferenças entre os arquivos no índice e a última versão commitada.
+git reset <arquivo> - Remove um arquivo específico do índice (staging area), preservando as alterações locais.
+git reset --soft HEAD~1 - Desfaz o último commit, mantendo as alterações nos arquivos no índice.
+git reset --mixed HEAD~1 - Desfaz o último commit e remove as alterações do índice, mantendo as alterações locais.
+git reset --hard HEAD~1 - Desfaz o último commit e remove todas as alterações locais.
+git reset --hard <commit> - Retorna para um commit específico, descartando todas as alterações após esse commit.
+git stash - Armazena temporariamente as alterações locais que ainda não foram commitadas.
+git stash apply - Aplica as alterações armazenadas temporariamente pelo git stash.
+git stash list - Lista todas as alterações armazenadas temporariamente pelo git stash.
+git stash drop - Remove a última alteração armazenada temporariamente pelo git stash.
+git stash pop - Aplica a última alteração armazenada temporariamente pelo git stash e a remove da lista.
+git cherry-pick <commit> - Aplica as mudanças introduzidas por um commit específico em outra branch.
+git rebase <branch> - Reorganiza o histórico de commits, aplicando commits de outra branch na branch atual.
+git tag <nome> - Cria uma nova tag para o commit atual.
+git tag - Lista todas as tags existentes.
+git tag -d <nome> - Deleta uma tag específica.
+git log --graph --oneline --all - Mostra o histórico de commits de forma gráfica.
+git reflog - Mostra o histórico de referências (HEADs) do repositório.
+git blame <arquivo> - Mostra quem modificou cada linha de um arquivo e em qual commit.
+git revert <commit> - Cria um novo commit que desfaz as alterações introduzidas por um commit específico.
+git bisect start - Inicia uma busca binária para encontrar o commit que introduziu um bug.
+git bisect bad - Marca o commit atual como ruim (contendo o bug).
+git bisect good <commit> - Marca um commit específico como bom (sem o bug).
+git bisect reset - Finaliza a busca binária e retorna para o estado original.
+git clean - Remove arquivos não rastreados do diretório de trabalho.
+git clean -f - Remove arquivos não rastreados de forma forçada.
+git clean -n - Mostra quais arquivos não rastreados seriam removidos sem realmente removê-los.
+git remote - Lista todos os repositórios remotos.
+git remote show <remoto> - Mostra informações sobre um repositório remoto específico.
+git remote rename <antigo> <novo> - Renomeia um repositório remoto.
+git remote remove <nome> - Remove um repositório remoto.
+git submodule add <URL> - Adiciona um repositório como submódulo do repositório atual.
+git submodule init - Inicializa os submódulos do repositório.
+git submodule update - Atualiza os submódulos do repositório.
+git submodule status - Mostra o status dos submódulos do repositório.
+git archive <branch> - Exporta o conteúdo de um repositório em um arquivo zip.
+git checkout -- <arquivo> - Desfaz as alterações locais em um arquivo específico e o restaura para a versão do último commit.
+git revert --abort - Aborta uma operação de revert em andamento.
+git merge --abort - Aborta uma operação de merge em andamento.
+git cherry-pick --abort - Aborta uma operação de cherry-pick em andamento.
+git config --global user.name <nome> - Configura o nome do usuário globalmente.
+git config --global user.email <email> - Configura o email do usuário globalmente.
+git config --global color.ui auto - Habilita a coloração na saída do Git.
+git config --global alias.<alias> <comando> - Cria um alias para um comando Git.
+git log --author=<autor> - Mostra o histórico de commits feitos por um autor específico.
+git log --grep=<palavra-chave> - Filtra o histórico de commits por uma palavra-chave específica.
+git log --since=<data> - Mostra o histórico de commits desde uma determinada data.
+git log --until=<data> - Mostra o histórico de commits até uma determinada data.
+git log --oneline - Mostra o histórico de commits em uma única linha por commit.
+git log --stat - Mostra estatísticas resumidas de cada commit.
+git log -p - Mostra as diferenças introduzidas por cada commit.
+git log -n <número> - Limita o número de commits mostrados.
+git log <arquivo> - Mostra o histórico de commits específico para um arquivo.
+git log <branch>..HEAD - Mostra o histórico de commits que estão na branch atual, mas não na branch especificada.
+git log HEAD..<branch> - Mostra o histórico de commits que estão na branch especificada, mas não na branch atual.
+git log <commit>..<commit> - Mostra o histórico de commits entre dois commits específicos.
+git blame -L <linha-inicial>,<linha-final> <arquivo> - Mostra quem modificou as linhas específicas de um arquivo.
+git shortlog - Mostra um resumo do histórico de commits por autor.
+git shortlog -s - Mostra um resumo do histórico de commits por autor, apenas contando o número de commits.
+git shortlog -sn - Mostra um resumo do histórico de commits por autor, ordenado pelo número de commits.
+git shortlog --since=<data> - Mostra um resumo do histórico de commits por autor desde uma determinada data.
+git shortlog --until=<data> - Mostra um resumo do histórico de commits por autor até uma determinada data.
+git shortlog --author=<autor> - Mostra um resumo do histórico de commits por um autor específico.
+git shortlog --email - Mostra um resumo do histórico de commits por autor, incluindo seus emails.
+git shortlog --summary - Mostra um resumo do histórico de commits por autor, incluindo detalhes de commits.
+git show <commit> - Mostra as mudanças introduzidas por um commit específico.
+git show <commit>:<arquivo> - Mostra o conteúdo de um arquivo específico em um commit específico.
+git show HEAD^ - Mostra as mudanças introduzidas pelo commit anterior ao HEAD.
+git show HEAD~<número> - Mostra as mudanças introduzidas pelo commit n passos antes do HEAD.
+git show HEAD~ - Mostra as mudanças introduzidas pelo commit anterior ao HEAD.
+git show :<arquivo> - Mostra o conteúdo do arquivo em sua forma atual no repositório.
+git diff <commit>..<commit> - Mostra as diferenças entre dois commits específicos.
+git diff <branch>..<branch> - Mostra as diferenças entre duas branches específicas.
+git diff <commit>..<branch> - Mostra as diferenças entre um commit e uma branch específica.
+git diff <branch>..<commit> - Mostra as diferenças entre uma branch e um commit específico.
+git diff HEAD^ - Mostra as diferenças entre o commit anterior ao HEAD e o HEAD.
+git diff HEAD~<número> - Mostra as diferenças entre o commit n passos antes do HEAD e o HEAD.
+git diff HEAD~ - Mostra as diferenças entre o commit anterior ao HEAD e o HEAD.
+git diff --name-only - Mostra apenas o nome dos arquivos com diferenças.
+git diff --cached - Mostra as diferenças entre os arquivos no índice e o último commit.
+git diff HEAD -- <arquivo> - Mostra as diferenças entre o arquivo no diretório de trabalho e a última versão commitada.
